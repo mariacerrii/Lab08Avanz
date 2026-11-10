@@ -23,6 +23,7 @@ class Controller:
         if self.mese_selezionato == 0:
             self._view.show_alert("Selezionare un Mese!")
         else:
+            self._view.lista_visualizzazione.update()
             prezzo_medio = self._model.get_prezzo_medio(self.mese_selezionato)
             self._view.lista_visualizzazione.controls.clear()
             self._view.lista_visualizzazione.controls.append(
